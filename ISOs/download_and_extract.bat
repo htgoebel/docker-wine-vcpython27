@@ -29,7 +29,7 @@ if not exist Standalone (
     if ERRORLEVEL 1 goto FAIL
     if exist _Standalone rmdir /s /q _Standalone
     mkdir _Standalone
-    start "foo" /wait sdksetup.exe /quiet /features OptionId.WindowsDesktopDebuggers OptionId.WindowsDesktopSoftwareDevelopmentKit /layout _Standalone
+    start "foo" /wait sdk_setup.exe /quiet /features OptionId.WindowsDesktopDebuggers OptionId.WindowsDesktopSoftwareDevelopmentKit /layout _Standalone
     if ERRORLEVEL 1 goto FAIL
     mkdir Standlone
     rename _Standalone Standalone
