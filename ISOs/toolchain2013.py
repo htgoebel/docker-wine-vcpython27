@@ -470,7 +470,7 @@ def main():
     # Set the working directory to 7z subdirectory. 7-zip doesn't find its
     # codec dll very well, so this is the simplest way to make sure it runs
     # correctly, as we don't otherwise care about working directory.
-    os.chdir(os.path.join(BASEDIR, '7z'))
+    os.chdir(os.path.join(BASEDIR, '..', '7z'))
     if options.use_gs and options.sha1:
       options.express = False
       DoTreeMirror(target_dir, options.sha1)
