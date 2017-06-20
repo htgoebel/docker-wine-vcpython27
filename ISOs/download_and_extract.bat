@@ -43,7 +43,7 @@ if not exist GRMWDK_EN_7600_1.ISO (
     rename GRMWDK_EN_7600_1.IS_ GRMWDK_EN_7600_1.ISO
 )
 
-if not exist %OUTPUT% mkdir %OUTDIR%
+if not exist %OUTPUT% ( mkdir %OUTDIR% )
 
 python.exe toolchain2013.py --noclean --local=%~dp0 --targetdir=%OUTPUT%\vs2013
 if ERRORLEVEL 1 goto FAIL
